@@ -20,7 +20,7 @@
             "customWebpackConfig": {
               "path": "config/webpack-prod.config.js"
             },
-            "outputPath": "dist/angular-boilerplate",
+            "outputPath": "dist/pf-nippy",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",

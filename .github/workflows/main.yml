@@ -2,7 +2,7 @@
 
 name: CI
 
-# Controls when the action will run. 
+# Controls when the action will run.
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
@@ -29,4 +29,4 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@4.0.0
         with:
           branch: gh-pages # The branch the action should deploy to.
-          folder: build # The folder the action should deploy.
+          folder: dist/pf-nippy # The folder the action should deploy.
