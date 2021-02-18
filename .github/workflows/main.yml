@@ -14,19 +14,17 @@ on:
   workflow_dispatch:
 
 jobs:
-  build-and-deploy:
+  build:
+
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v2.3.1
-
-      - name: Install and Build 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
-        run: |
-          npm install
-          npm build --prod --base-href "https://team-algae.github.io/pf-nippy/"
-
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@4.0.0
-        with:
-          branch: gh-pages # The branch the action should deploy to.
-          folder: dist/pf-nippy # The folder the action should deploy.
+    - uses: actions/checkout@v2
+    - name: deploying angular
+      uses: AhsanAyaz/angular-deploy-gh-pages-actions
+      with:
+        github_access_token: ${{ secrets.algae }} # see the Configuration section for how you can create secrets
+        build_configuration: production # The build environment for the app. please look configurations in your angular.json
+        base_href: /pf-nippy/   # make sure this corresponds to https://<your_username>.github.io/<base_href>/
+        deploy_branch: gh-pages # The branch the action should deploy to.
+        angular_dist_build_folder: dist/pf-nippy # The folder where your project is supposed to be after running ng build by the action.
