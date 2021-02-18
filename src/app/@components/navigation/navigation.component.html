@@ -1,0 +1,42 @@
+<!-- ref: https://github.com/justalever/tailwind-navbar/blob/master/public/index.html -->
+<header id="header"
+  class="flex flex-wrap items-center px-6 py-2 mx-auto font-bold bg-white lg:px-16 lg:py-0 font-montserrat">
+  <div class="flex items-center justify-between flex-1">
+    <div class="flex items-center justify-between flex-1">
+      <a class="text-2xl text-black" routerLink="/">Nippy</a>
+    </div>
+  </div>
+
+  <div [ngClass]="toggle ? '' : 'is-active'" class="hamburger hamburger--elastic lg:hidden" (click)="toggle = !toggle">
+    <span class="hamburger-box">
+      <span class="hamburger-inner"></span>
+    </span>
+  </div>
+
+  <div [ngClass]="toggle ? 'hidden' : ''" class="w-full lg:w-auto lg:flex lg:items-center" id="menu">
+    <nav>
+      <ul class="items-center justify-between pt-4 text-base text-gray-700 lg:flex lg:pt-0">
+        <li>
+          <a class="block px-0 py-3 border-b-2 border-transparent lg:p-4 hover:text-primary-900" pageScroll
+            href="#hello">ABOUT US</a>
+        </li>
+        <li>
+          <a class="block px-0 py-3 border-b-2 border-transparent lg:p-4 hover:text-primary-900" pageScroll
+            href="#hi">SHOP</a>
+        </li>
+        <li>
+          <a class="block px-0 py-3 border-b-2 border-transparent lg:p-4 hover:text-primary-900" pageScroll
+            href="#hello">PORTFOLIO</a>
+        </li>
+        <li>
+          <a class="block px-0 py-3 border-b-2 border-transparent lg:p-4 hover:text-primary-900" pageScroll
+            href="#hello">BLOG</a>
+        </li>
+        <li>
+          <a class="block px-0 py-3 border-b-2 border-transparent lg:p-4 hover:text-primary-900" pageScroll
+            href="#hello">ELEMENTS</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

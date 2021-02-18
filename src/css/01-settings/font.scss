@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,700&family=Open+Sans:wght@300;400&family=Playfair+Display&display=swap');
+
+@mixin font-monserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+@mixin font-opensans {
+  font-family: 'Open Sans', sans-serif;
+}
+
+@mixin font-playfair {
+  font-family: 'Playfair Display', serif;
+}
+
+html {
+  @include font-opensans;
+  font-weight: 400;
+}
+
